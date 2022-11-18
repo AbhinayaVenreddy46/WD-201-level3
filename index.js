@@ -20,15 +20,15 @@ const todoList = () => {
   const toDisplayableList = (list) => {
     return list
     .map(
-      (Todo) => '${Todo.completed ? "[x]" : "[ ]"} ${Todo.title} ${
+      (Todo) => `${Todo.completed ? "[x]" : "[ ]"} ${Todo.title} ${
         Todo.dueDate === today ? "" : Todo.dueDate
-    }'
+    }`
     )
     .join("\n");
 
   };
 
-  return {all, add,markAsComplete,overdue,dueToday,dueLater,toDisplayList };
+  return {all, add,markAsComplete,overdue,dueToday,dueLater,toDisplayableList };
 };
 
 // ####################################### #
